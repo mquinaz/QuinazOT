@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Sandra" script="Sandra.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="140" head="115" body="95" legs="125" feet="57" addons="1" />
+	<parameters>
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="
+		lifefluid,2006,50,10;
+		manafluid,2006,50,7;
+			vial of blood,2006,15,2;
+			vial of oil,2006,20,11;
+			vial of slime,2006,12,4;
+			vial of urine,2006,10,13;
+			vial of water,2006,8,1;" />
+		<parameter key="shop_sellable" value="
+			vial,2006,5;" />
+	</parameters>
+</npc>
+
+<?ignore missing items
+			health potion,7618,45;
+			great health potion,7591,190;
+			great mana potion,7590,120;
+			great spirit potion,8472,190;
+			ultimate health potion,8473,310;
+			strong health potion,7588,100;
+			strong mana potion,7589,80;
+			mana potion,7620,50;
+
+			
+			sell..
+			spellwand,7735,299;
+			empty potion flask,7634,5;
+			empty potion flask,7635,5;
+			empty potion flask,7636,5;
+?>
