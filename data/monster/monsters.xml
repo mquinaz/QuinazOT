@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
 <monsters>
-
+	<monster name="Marcelo Rebelo de Sousa" file="special/marcelorebelodesousa.xml"/>
+	<monster name="Antonio Costa" file="special/antoniocosta.xml"/>
+	<monster name="Jose Socrates" file="special/josesocrates.xml"/>
+	<monster name="Catarina Martins" file="special/catarinamartins.xml"/>
+	<monster name="Fernando Mendes" file="special/fernandomendes.xml"/>
+	<monster name="Rui Rio" file="special/ruirio.xml"/>
+	
 	<monster name="Amazon" file="amazon.xml"/>
 	<monster name="Ancient Scarab" file="ancient scarab.xml"/>
 	<monster name="Assassin" file="assassin.xml"/>
@@ -14,7 +20,6 @@
 	<monster name="Black Knight" file="black knight.xml"/>
 	<monster name="Black Sheep" file="black sheep.xml"/>
 	<monster name="Blue Djinn" file="blue djinn.xml"/>
-	<monster name="Bolsonaro" file="special/bolsonaro.xml"/>
 	<monster name="Bonebeast" file="bonebeast.xml"/>
 	<monster name="Bug" file="bug.xml"/>
 	<monster name="Butterfly" file="butterfly.xml"/>
