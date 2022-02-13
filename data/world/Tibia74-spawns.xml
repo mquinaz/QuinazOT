@@ -24796,6 +24796,13 @@
 		<monster name="dwarf guard" x="0" y="0" z="12" spawntime="60" />
 		<monster name="dwarf guard" x="1" y="0" z="12" spawntime="60" />
 	</spawn>
+	<spawn centerx="32116" centery="31998" centerz="12" radius="1">
+		<monster name="Catarina Martins" x="-1" y="-1" z="12" spawntime="60" />
+		<monster name="Marcelo Rebelo de Sousa" x="0" y="0" z="12" spawntime="60" />
+		<monster name="Jose Socrates" x="1" y="0" z="12" spawntime="60" />
+		<monster name="Antonio Costa" x="-1" y="1" z="12" spawntime="60" />
+		<monster name="Rui Rio" x="1" y="1" z="12" spawntime="60" />
+	</spawn>
 	<spawn centerx="32415" centery="32005" centerz="12" radius="1">
 		<monster name="orc" x="0" y="0" z="12" spawntime="60" />
 		<monster name="orc" x="1" y="0" z="12" spawntime="60" />
@@ -24817,8 +24824,8 @@
 		<monster name="orc spearman" x="0" y="1" z="12" spawntime="60" />
 		<monster name="orc spearman" x="1" y="1" z="12" spawntime="60" />
 	</spawn>
-	<spawn centerx="32112" centery="32013" centerz="12" radius="1">
-		<monster name="Bolsonaro" x="0" y="0" z="12" spawntime="60" />
+	<spawn centerx="32116" centery="32013" centerz="12" radius="1">
+		<monster name="Fernando Mendes" x="0" y="0" z="12" spawntime="60" />
 	</spawn>
 	<spawn centerx="32368" centery="32021" centerz="12" radius="1">
 		<monster name="ghoul" x="0" y="0" z="12" spawntime="60" />
