@@ -5,10 +5,7 @@
 
 - Change localhost to IPV4 and port forward router;
 
-- Fix NPC quest - seymour - buy key - present 
-- downstairs npc book from > map
 - final boss fix spells + create minions to summon
-- decay light with timer(?) , pick bug 
 
 ## Instructions
 
