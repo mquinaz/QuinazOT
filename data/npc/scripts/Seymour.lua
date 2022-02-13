@@ -20,7 +20,7 @@ npcHandler:addModule(VoiceModule:new(voices))
 local hiKeyword = keywordHandler:addGreetKeyword({'hi'}, {npcHandler = npcHandler, text = 'Hello, |PLAYERNAME|. Welcome to the Academy of Rookgaard. May I sign you up as a {student}?'})
 	hiKeyword:addChildKeyword({'student'}, StdModule.say, {npcHandler = npcHandler, text = 'Brilliant! We need fine adventurers like you! If you are ready to learn, just ask me for a lesson. You can always ask for the differently coloured words - such as this one - to continue the lesson.', reset = true})
 	hiKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'Brilliant! We need fine adventurers like you! If you are ready to learn, just ask me for a lesson. You can always ask for the differently coloured words - such as this one - to continue the lesson.', reset = true})
-	hiKeyword:addChildKeyword({''}, StdModule.say, {npcHandler = npcHandler, text = 'Only nonsense on your mind, eh?', reset = true})
+	--hiKeyword:addChildKeyword({''}, StdModule.say, {npcHandler = npcHandler, text = 'Only nonsense on your mind, eh?', reset = true})
 keywordHandler:addAliasKeyword({'hello'})
 
 keywordHandler:addFarewellKeyword({'bye'}, {npcHandler = npcHandler, text = 'Good bye, |PLAYERNAME|! And remember: No running up and down in the academy!'})
@@ -48,12 +48,12 @@ local ratKeyword = keywordHandler:addKeyword({'dead', 'rat'}, StdModule.say, {np
 	ratKeyword:addChildKeyword({''}, StdModule.say, {npcHandler = npcHandler, text = 'Go and find some rats to kill!', reset = true})
 
 -- Quest
-local boxKeyword = keywordHandler:addKeyword({'box'}, StdModule.say, {npcHandler = npcHandler, text = 'Do you have a suitable present box for me?'})
-    boxKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'THANK YOU! Here is a helmet that will serve you well.', reset = true},
-        function(player) return player:getItemCount(1990) > 0 end,
-        function(player) player:removeItem(1990, 1) player:addItem(2480, 1) end
-    )
-    boxKeyword:addChildKeyword({''}, StdModule.say, {npcHandler = npcHandler, text = 'HEY! You don\'t have one! Stop playing tricks on me or I\'ll give you some extra work!', reset = true})
+--local boxKeyword = keywordHandler:addKeyword({'present'}, StdModule.say, {npcHandler = npcHandler, text = 'Do you have a suitable present box for me?'})
+  --  local answerKeyword = boxKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'THANK YOU! Here is a helmet that will serve you well.', reset = true})
+   --     function(player) return player:getItemCount(1990) > 0 end,
+   --     function(player) player:removeItem(1990, 1) player:addItem(2480, 1) end
+    --)
+    --boxKeyword:addChildKeyword({''}, StdModule.say, {npcHandler = npcHandler, text = 'HEY! You don\'t have one! Stop playing tricks on me or I\'ll give you some extra work!', reset = true})
 
 keywordHandler:addKeyword({'mission'}, StdModule.say, {npcHandler = npcHandler, text = 'Well, I would like to send our king a little present but I do not have a suitable box. If you find a nice box, please bring it to me.'},
 	function(player) return player:getLevel() >= 4 end)
@@ -68,6 +68,7 @@ keywordHandler:addKeyword({'fuck'}, StdModule.say, {npcHandler = npcHandler, tex
 	function(player) player:getPosition():sendMagicEffect(CONST_ME_YELLOW_RINGS) end)
 
 -- Basic keywords
+--keywordHandler:addKeyword({'present'}, StdModule.say, {npcHandler = npcHandler, text = 'Do you have a suitable present box for me?'})
 keywordHandler:addKeyword({'hint'}, StdModule.rookgaardHints, {npcHandler = npcHandler})
 keywordHandler:addKeyword({'island', 'of', 'destiny'}, StdModule.say, {npcHandler = npcHandler, text = 'This is an island with {vocation} teachers. You can learn all about the different vocations there once you are level 8.'})
 keywordHandler:addKeyword({'time'}, StdModule.say, {npcHandler = npcHandler, text = 'It\'s |TIME|, so you are late. Hurry!'})
@@ -177,6 +178,39 @@ keywordHandler:addKeyword({'tom'}, StdModule.say, {npcHandler = npcHandler, text
 keywordHandler:addKeyword({'dallheim'}, StdModule.say, {npcHandler = npcHandler, text = 'He\'s the guard on the north {bridge} and a great fighter. He can show you {monster} locations. Just ask him about monsters!'})
 keywordHandler:addKeyword({'zerbrus'}, StdModule.say, {npcHandler = npcHandler, text = 'He\'s the guard on the west {bridge} and a great fighter. He can show you {monster} locations. Just ask him about monsters!'})
 
+
+function creatureSayCallback(cid, type, msg)
+    if not npcHandler:isFocused(cid) then
+        return false
+    end
+	
+	--selfSay('Do you have a suitable present box for me?',cid)
+    if msgcontains(msg, 'present') then
+        local player = Player(cid)
+        if player:getItemCount(1990) > 0 then
+            selfSay('THANK YOU! Here is a helmet that will serve you well.', cid)
+            player:removeItem(1990, 1)
+			player:addItem(2480, 1)
+            player:setStorageValue(PlayerStorageKeys.legionhelmetquest)
+        else
+            selfSay('HEY! You don\'t have one! Stop playing tricks on me or I\'ll give you some extra work!', cid)
+        end
+    end
+	
+	if msgcontains(msg, 'key') then
+        local player = Player(cid)
+        if player:getItemCount(2148) > 10 then
+            selfSay('Thank you for buying a key for the dungeon.', cid)
+            player:removeItem(2148, 10)
+			local key = player:addItem(2088, 1)
+			key:setActionId(4605)
+        else
+            selfSay('HEY! You don\'t have enough money!', cid)
+        end
+    end
+end
+
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'Good bye! And remember: No running up and down in the academy!')
 
+npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())

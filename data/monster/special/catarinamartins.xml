@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Catarina Martins" nameDescription="a Prime minister" race="blood" experience="2000" speed="125" manacost="10000">
+   <health now="50" max="50"/>
+   <look type="136" head="59" body="94" legs="69" feet="114" addons="0" corpse="3065"/>
+   <targetchange interval="2000" chance="50"/>
+   <strategy attack="100" defense="0"/>
+	<flags>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag summonable="1"/>
+		<flag convinceable="0"/>
+		<flag illusionable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="0"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="3"/>
+		<flag staticattack="100"/>
+		<flag runonhealth="1"/>
+	</flags>
+	<attacks>
+		<attack name="physical" checkshield="1" chance="50" range="7" min="-2" max="-10">
+			<attribute key="shootEffect" value="throwingknife"/>
+		</attack>
+		<attack name="physical" checkshield="1" chance="50" range="7" min="-2" max="-10">
+			<attribute key="shootEffect" value="enchantedspear"/>
+		</attack>
+		<attack name="physical" checkshield="1" chance="50" range="7" min="-2" max="-10">
+			<attribute key="shootEffect" value="poisonarrow"/>
+		</attack>
+		<attack name="physical" checkshield="1" chance="50" range="7" min="-2" max="-10">
+			<attribute key="shootEffect" value="throwingstar"/>
+		</attack>		
+		<attack name="physical" checkshield="1" chance="50" range="7" min="-2" max="-10">
+			<attribute key="shootEffect" value="smallstone"/>
+		</attack>		
+		<attack name="physical" checkshield="1" chance="50" range="7" min="-2" max="-10">
+			<attribute key="shootEffect" value="powerbolt"/>
+		</attack>
+		
+		<attack name="melee" interval="2000" skill="40" attack="5"/>
+
+	</attacks>
+		 <defenses armor="5" defense="1">
+		   </defenses>
+	<elements>
+	</elements>
+	<immunities>
+	</immunities>
+	<voices interval="1000" chance="10">
+		<voice sentence="Antonio Costa disse, e tao bem, que as pessoas em Portugal tem ma memoria das maiorias absolutas."/>
+		<voice sentence="Eu acho que a frase e profundamente infeliz e acho que nao devo dizer mais nada sobre isso"/>
+		<voice sentence="porque estou em campanha autarquica e e campanha autarquica que vou fazer"/>
+		<voice sentence="Vou dizer uma coisa que talvez nao seja politicamente correta. Nos ganhamos com o Covid."/>
+	</voices>
+	<loot>
+		<item id="2691" chance="90000"/><!-- 30% brown bread -->
+	</loot>
+</monster>
