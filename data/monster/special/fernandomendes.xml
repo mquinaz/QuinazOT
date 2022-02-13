@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Fernando Mendes" nameDescription="a Prime minister" race="blood" experience="100" speed="10" manacost="10000">
+   <health now="50" max="50"/>
+   <look type="251" head="76" body="38" legs="114" feet="94" addons="0" corpse="3065"/>
+   <targetchange interval="2000" chance="80"/>
+   <strategy attack="100" defense="0"/>
+	<flags>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag summonable="0"/>
+		<flag convinceable="0"/>
+		<flag illusionable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="0"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="100"/>
+		<flag runonhealth="1"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="40" attack="20"/>
+		<attack name="speed" interval="200" chance="80" range="7" speedchange="-1000" duration="2000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		
+	</attacks>
+		 <defenses armor="5" defense="1">
+		   </defenses>
+	<elements>
+	</elements>
+	<immunities>
+	</immunities>
+	<voices interval="1000" chance="10">
+		<voice sentence="ESPEEETACCCUUULOO."/>
+	</voices>
+	<loot>
+		<item id="2691" chance="90000"/><!-- 30% brown bread -->
+	</loot>
+</monster>
