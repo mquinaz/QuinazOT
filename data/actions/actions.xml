@@ -22,6 +22,7 @@
 	<action actionid="5645" script="rookgaard/carlinsword_quest.lua" />
 	<action actionid="5646" script="rookgaard/carlinsword_quest2.lua" />
 	<action actionid="5647" script="rookgaard/carlinsword_quest3.lua" />
+	<action actionid="5648" script="rookgaard/spikesword_quest.lua" />
 	
 	<!-- Quests -->
 	<action itemid="1740" script="quests/quests.lua" />
