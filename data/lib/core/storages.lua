@@ -758,6 +758,23 @@ PlayerStorageKeys = {
 	},
 
 	QuestChests = {
+		amazonquest1 = 5629,
+		amazonquest2 = 5630,
+		bearkey = 5641,
+		leatherset = 5643,
+		coopershieldquest = 5633,
+		katanaquestkatana = 5634,
+		katanaquestvikinghelmet = 5635,
+		katanaquestkey = 5637,
+		HoneyFlower = 5640,
+		plateshield = 5642,
+		minomagekey = 5644,
+		carlinsword = 5645,
+		carlinsword2 = 5646,
+		carlinsword3 = 5647,
+		spikeswordquest = 5648,
+		presentquest = 5649,
+		
 		-- Todo: Move to a seperate range
 		KosheiTheDeathlessLegs = 3067,
 		KosheiTheDeathlessGold = 3068,
