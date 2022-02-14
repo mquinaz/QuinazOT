@@ -5,8 +5,6 @@
 
 - Change localhost to IPV4 and port forward router;
 
-- final boss fix spells + create minions to summon
-
 ## Instructions
 
 -The compilation instructions are here: https://github.com/otland/forgottenserver/wiki/Compiling-on-Windows-%28vcpkg%29
