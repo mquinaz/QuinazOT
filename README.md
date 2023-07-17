@@ -1,9 +1,8 @@
 # QuinazOT
  Tibia OT private server
 
-## TODO
-
-- Change localhost to IPV4 and port forward router;
+## Port Forwarding
+- Use global ip for config; use local ipv4 for port forwarding 7171, 7172, 80 ports both in router and firewall.
 
 ## Instructions
 
