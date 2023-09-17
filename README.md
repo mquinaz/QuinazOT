@@ -16,7 +16,7 @@
 - With ZnoteAAC put files under www directory of UniserverZ and connect localhost to create account in website(inserts in database).
 
 - Now change config.lua with your mysql host,user,pass,database and IP. 
--
+
 -Download tibia client 8.0 http://tibiaclient.otslist.eu/download/tibia800.exe and tibia ipchanger https://otland.net/threads/otland-ip-changer.134369/.
 
 - After this is done start theforgottenserver-x64.exe, open the tibia 8.0 client and tibia ipchanger. Use your ip or localhost and client 8.0 to change IP. Now all is done and you can log in into your server.
