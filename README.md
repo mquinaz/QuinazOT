@@ -1,6 +1,8 @@
 # QuinazOT
  Tibia OT private server
 
+![InstaTalk](https://github.com/mquinaz/QuinazOT/blob/main/images/quinazot.png)
+
 ## Port Forwarding
 - Use global ip for config; use local ipv4 for port forwarding 7171, 7172, 80 ports both in router and firewall.
 
